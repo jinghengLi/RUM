@@ -1,0 +1,30 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int MAX(int x, int y, int z)
+{
+	int max = 0;
+	if ((x <y)&& (x = y)&& (x < z))
+	{
+		if ((y > z) && (x = z))
+			max = y;
+		else
+			max = z;
+	}
+	else
+			max=x;
+	return max;
+}
+
+
+int main()
+{
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	int d = 0;
+	printf("请输入三个数字：\n");
+	scanf_s("%d%d%d", &a, &b, &c);
+	d=MAX(a, b, c);
+	printf("最大值为:%d\n",d);
+	return 0;
+}
