@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "F:\\Microsoft Visual Studio\\Data\\learn\\day01\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{25A2BD85-253D-47CC-9821-BD9CF1B91C12}|day01.vcxproj|F:\\Microsoft Visual Studio\\Data\\learn\\day01\\Multiple of 3.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{25A2BD85-253D-47CC-9821-BD9CF1B91C12}|day01.vcxproj|solutionrelative:Multiple of 3.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{25A2BD85-253D-47CC-9821-BD9CF1B91C12}|day01.vcxproj|F:\\Microsoft Visual Studio\\Data\\learn\\day01\\swap.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25A2BD85-253D-47CC-9821-BD9CF1B91C12}|day01.vcxproj|solutionrelative:swap.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25A2BD85-253D-47CC-9821-BD9CF1B91C12}|day01.vcxproj|F:\\Microsoft Visual Studio\\Data\\learn\\day01\\goto.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25A2BD85-253D-47CC-9821-BD9CF1B91C12}|day01.vcxproj|solutionrelative:goto.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,30 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 40,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 62,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Multiple of 3.c",
-              "DocumentMoniker": "F:\\Microsoft Visual Studio\\Data\\learn\\day01\\Multiple of 3.c",
-              "RelativeDocumentMoniker": "Multiple of 3.c",
-              "ToolTip": "F:\\Microsoft Visual Studio\\Data\\learn\\day01\\Multiple of 3.c",
-              "RelativeToolTip": "Multiple of 3.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
+              "Title": "swap.c",
+              "DocumentMoniker": "F:\\Microsoft Visual Studio\\Data\\learn\\day01\\swap.c",
+              "RelativeDocumentMoniker": "swap.c",
+              "ToolTip": "F:\\Microsoft Visual Studio\\Data\\learn\\day01\\swap.c",
+              "RelativeToolTip": "swap.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-08-04T18:12:36.986Z",
+              "WhenOpened": "2025-08-05T09:07:21.516Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "goto.c",
+              "DocumentMoniker": "F:\\Microsoft Visual Studio\\Data\\learn\\day01\\goto.c",
+              "RelativeDocumentMoniker": "goto.c",
+              "ToolTip": "F:\\Microsoft Visual Studio\\Data\\learn\\day01\\goto.c",
+              "RelativeToolTip": "goto.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-08-05T08:38:16.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         },
