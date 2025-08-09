@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+	int i = 0, j = 0, k = 0, a = 0, b = 0, c = 2, d = 3;
+	i = ++a && b++ && c++;
+	printf("a = %d,b = %d,c = %d\n", a, b, c);
+	i = 0, j = 0, k = 0, a = 0, b = 0, c = 2, d = 3;
+	i = a++ && b++ && c++;
+	printf("a = %d,b = %d,c = %d\n", a, b, c);
+	i = 0, j = 0, k = 0, a = 0, b = 1, c = 2, d = 3;
+	j = b++ && ++c && d++;
+	printf("b = %d,c = %d,d = %d\n", b, c, d);
+	i = 0, j = 0, k = 0, a = 0, b = 0, c = 2, d = 3;
+	i = a++ || ++b || c++;
+	printf("a = %d,b = %d,c = %d\n", a, b, c);
+	i = 0, j = 0, k = 0, a = 0, b = 0, c = 2, d = 3;
+	i = ++a || ++b || c++;
+	printf("a = %d,b = %d,c = %d\n", a, b, c);
+	i = 0, j = 0, k = 0, a = 0, b = 0, c = 2, d = 3;
+	i = a++ || b++ || c++;
+	printf("a = %d,b = %d,c = %d\n", a, b, c);
+	return 0;
+
+}
+//    &&    从左往右，当一个条件为0，后面就不用继续了,否则继续判断
+//    ||    从左往右，当一个条件为非0，后面就不用继续了,否则继续判断
