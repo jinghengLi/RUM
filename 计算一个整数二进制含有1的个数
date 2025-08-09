@@ -1,0 +1,30 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+// 函数：打印无符号整数的二进制表示（递归实现）
+
+int count = 0;  // 计数器，用于统计二进制位数
+void print_binary(unsigned int n) {
+    if (n != 1)
+        print_binary(n >> 1);  // 递归处理高位
+    int  ret = '0' + (n & 1);
+    if (ret == '1') {
+        count++;  // 统计二进制位数
+	}
+    putchar('0' + (n & 1));    // 输出当前最低位
+}
+
+int main() {
+    int num = 0;
+    printf("请输入一个整数: ");
+    scanf("%d", &num);
+    // 有符号
+    if (num == 0) {
+        printf("0");  // 单独处理0的情况
+    }
+    else {
+        print_binary((unsigned int)num);  // 将有符号整数转换为无符号整数
+    }
+	printf("\n二进制位数: %d\n", count);  // 输出二进制位数
+    return 0;
+}
