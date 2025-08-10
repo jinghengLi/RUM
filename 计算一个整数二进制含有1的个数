@@ -4,7 +4,7 @@
 // 函数：打印无符号整数的二进制表示（递归实现）
 
 int count = 0;  // 计数器，用于统计二进制位数
-void print_binary(unsigned int n) {
+void print_binary(unsigned int n) {   //  按照转换规则，负数-k，会被转换为2^n - k
     if (n != 1)
         print_binary(n >> 1);  // 递归处理高位
     int  ret = '0' + (n & 1);
