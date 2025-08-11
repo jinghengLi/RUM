@@ -15,7 +15,11 @@ void reverse (char* left, char* right) {
 int main() {
     char arr[101];
     //输入
-    gets(arr);
+	if (fgets(arr, sizeof(arr), stdin) != NULL) {
+	        // 去掉最后的换行符（如果存在）
+	        arr[strcspn(arr, "\n")] = '\0';
+	    }
+    //gets(arr);
     //所有字符逆序
     reverse(arr, arr + strlen(arr) - 1);
     char* start = arr;
