@@ -1,0 +1,39 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <math.h>
+#include <stdio.h>
+
+int count = 0;
+int count_n(const int n) {
+	//计算n是几位数
+	if (n>9) {
+		count++;
+		return count_n(n / 10);
+	} else {
+		count++;
+		return count; // 返回位数
+
+	}
+	return  1; // 返回位数
+}
+
+int Narcissus(const int n,const int num) {
+	if (n > 9)
+		return Narcissus(n / 10, num) + pow(n % 10, num);
+	return pow(n,num);
+}
+
+int main() {
+
+	int n = 0;
+	int num = 0;
+	scanf("%d", &n);
+	num = count_n(n);
+	printf("%d\n", num);
+	int ret = Narcissus(n,num);
+	if (ret == n) {
+		printf("Yes\n");
+	} else {
+		printf("No\n");
+	}
+	return 0;
+}
