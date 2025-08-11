@@ -1,0 +1,15 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+	int n = 20;
+	int sum = 20；
+	do {
+		
+		sum += n / 2;
+		n = n / 2 + n % 2;
+
+	} while (n / 2);
+	printf("%d\n", sum);
+	return 0;
+}
