@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+
+
+char* Char_move(char* str, int num) {
+    char* start = str;
+    for (int i = 0; i < num; i++) {
+        char* p = start;
+        while (*(p+1)) {
+            char tmp = *p;
+            *p = *(p + 1);
+            *(p + 1) = tmp;
+            p++;
+        }
+    }
+    return start;
+}
+int main() {
+    char s[100] = "ABCDEFGHIJK";
+    int k = 4;
+   char* ret = Char_move(s, k);
+    printf("%s\n", ret);
+    return 0;
+}
