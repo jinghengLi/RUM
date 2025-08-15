@@ -1,3 +1,45 @@
+#include <string.h>
+
+//三次旋转法
+char* Char_move(char* str, int num) {
+    // 处理空指针或空字符串
+    if (!str || !*str) return str;
+
+    int len = strlen(str);
+    // 计算有效移动次数（处理num超过长度的情况）
+    num = num % len;
+    if (num == 0) return str; // 无需移动
+
+    // 高效的三次反转算法（时间复杂度O(n)）
+    // 1. 反转前num个字符
+    for (int i = 0, j = num - 1; i < j; ++i, --j) {
+        char tmp = str[i];
+        str[i] = str[j];
+        str[j] = tmp;
+    }
+    // 2. 反转剩余字符
+    for (int i = num, j = len - 1; i < j; ++i, --j) {
+        char tmp = str[i];
+        str[i] = str[j];
+        str[j] = tmp;
+    }
+    // 3. 整体反转
+    for (int i = 0, j = len - 1; i < j; ++i, --j) {
+        char tmp = str[i];
+        str[i] = str[j];
+        str[j] = tmp;
+    }
+    
+    return str;
+}
+
+
+
+
+
+
+
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
