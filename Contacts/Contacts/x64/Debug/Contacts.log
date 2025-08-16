@@ -1,0 +1,6 @@
+﻿  Contacts.c
+F:\Microsoft Visual Studio\Data\learn\Contacts\Contacts\Contacts.c(74,9): warning C4477: “printf”: 格式字符串“%-3d”需要类型“int”的参数，但可变参数 2 拥有了类型“char *”
+  main.c
+F:\Microsoft Visual Studio\Data\learn\Contacts\Contacts\Contacts.c(74,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "char *" 的参数 2 冲突
+  正在生成代码...
+LINK : fatal error LNK1168: 无法打开 F:\Microsoft Visual Studio\Data\learn\Contacts\x64\Debug\Contacts.exe 进行写入
