@@ -1,9 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
 int main() {
-    char str[1001];
+    char str[10000] = { 0 };
     char n = 0;
     int count = 0;
     // 使用 fgets 是安全的，但要确保指定正确的缓冲区大小
@@ -12,19 +13,12 @@ int main() {
     }
     // 使用 fgets 是安全的，但要确保指定正确的缓冲区大小
     scanf("%c", &n);
-
-    for (int i = 0; i < sizeof(str) - 1; i++) {
-        if (isdigit(n)&& n == str[i]) {
-                count++;
+    int i = 0;
+    while (str[i] != '\0') {
+        if (tolower(n) == tolower(str[i])) {
+            count++;
         }
-        else if (isalpha(n)) {
-            if (toascii(tolower(n)) == toascii(tolower(str[i]))) {
-                count++;
-            }
-        }
-        else {
-                ;
-        }
+        i++;
     }
     printf("%d\n", count);
     return 0;
