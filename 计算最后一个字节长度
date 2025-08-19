@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+int main() {
+    int len=0;
+    char c='\0';
+    while ((c=getchar())!='\n') {
+    if (c==' ') {
+        len=0;
+    }
+    else {
+    len++;
+    }
+    }
+    printf("%d\n",len);
+    return 0;
+}
