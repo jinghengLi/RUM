@@ -1,0 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+int main() {
+
+    char str[20] = { 0 };
+
+    while (scanf("%s", str) == 1) {
+        str[strcspn(str, "\n")] = '\0';
+        int sum = 0;
+        int len = strlen(str);
+        for (int i = 2; i < len; i++) {
+            if (isdigit(str[i])) {
+                sum += pow(16, (len - i-1 ))*(str[i] - 48);
+            }
+            else{
+                sum += pow(16, (len - i-1) )*(str[i] - 55);
+            }
+        }
+        printf("%d\n", sum);
+    }
+    return 0;
+}
