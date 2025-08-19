@@ -1,0 +1,31 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <string.h>
+#include <stdio.h>
+#include <ctype.h>
+int main() {
+    char str[1001];
+    char n = 0;
+    int count = 0;
+    // 使用 fgets 是安全的，但要确保指定正确的缓冲区大小
+    if (fgets(str, sizeof(str), stdin) != NULL) {
+        str[strcspn(str, "\n")] = '\0';
+    }
+    // 使用 fgets 是安全的，但要确保指定正确的缓冲区大小
+    scanf("%c", &n);
+
+    for (int i = 0; i < sizeof(str) - 1; i++) {
+        if (isdigit(n)&& n == str[i]) {
+                count++;
+        }
+        else if (isalpha(n)) {
+            if (toascii(tolower(n)) == toascii(tolower(str[i]))) {
+                count++;
+            }
+        }
+        else {
+                ;
+        }
+    }
+    printf("%d\n", count);
+    return 0;
+}
