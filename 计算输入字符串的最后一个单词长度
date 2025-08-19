@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+    char str[100];
+    // 使用 fgets 是安全的，但要确保指定正确的缓冲区大小
+    if (fgets(str, sizeof(str), stdin) != NULL) {
+        // 去掉最后的换行符（如果存在）
+        str[strcspn(str, "\n")] = '\0';
+    }
+    char* p = " ";
+    char cp[100]; // 确保 cp 数组有足够的空间
+    strcpy(cp, str); // 将 str 复制到 cp 中
+    char* arr[100]; // 存储字符串指针的数组
+
+    int i = 0;
+    // 调用 strtok
+    for (arr[i ] = strtok(cp, p); arr[i] != NULL ; arr[i] = strtok(NULL, p)) {
+        i++;
+    }
+    printf("%d\n",strlen(arr[i-1]));
+
+
+    return 0;
+
+
+}
