@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[100] = { 0 };
+    while (scanf("%99s", s) != EOF) {
+        int sz = strlen(s);
+
+        // 反转字符串
+        for (int left = 0, right = sz - 1; left < right; left++, right--) {
+            char tmp = s[left];
+            s[left] = s[right];
+            s[right] = tmp;
+        }
+
+        // 去重处理
+        int write_index = 0;
+        int seen[256] = {0}; // ASCII字符集，标记已出现的字符
+
+        for (int i = 0; i < sz; i++) {
+            if (!seen[(unsigned char)s[i]]) {
+                s[write_index++] = s[i];
+                seen[(unsigned char)s[i]] = 1;
+            }
+        }
+        s[write_index] = '\0'; // 添加字符串结束符
+
+        printf("%s\n", s);
+    }
+    return 0;
+}
